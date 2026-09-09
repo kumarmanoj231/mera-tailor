@@ -13,3 +13,15 @@
 7. 📦 **Track Progress** — Follow the order status until it is ready for collection.
 8. ⭐ **Review & Reorder** — Review completed orders and easily repeat an order with a trusted tailor.
 
+## 🛠️ Technology
+
+**MERN Stack**
+
+* 🍃 MongoDB — Database
+* 🚂 Express.js — Backend framework
+* ⚛️ React — Frontend
+* 🟢 Node.js — Runtime environment
+
+## 🎯 Vision
+
+✨ Make finding and working with a trusted tailor simple, accessible, and convenient.
