@@ -22,9 +22,6 @@ const App = () => {
         <Route path="/orders" element={<Orders />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/contact" element={<Contact />} />
-
-        {/* Page Not Found → Home */}
-        <Route path="*" element={<Home />} />
       </Routes>
     </div>
   );
