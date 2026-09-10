@@ -34,7 +34,7 @@ const NavbarLogo = ({ mobile = false, onClick }) => {
             ${mobile ? "text-[17px]" : "text-[18px]"}
           `}
         >
-          Mera
+          मेरा &nbsp;
           <span className="text-gray-500">Tailor</span>
         </div>
 

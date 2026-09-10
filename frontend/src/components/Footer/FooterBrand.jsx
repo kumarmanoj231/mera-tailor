@@ -72,7 +72,7 @@ const FooterBrand = () => {
               text-gray-950
             "
           >
-            Mera
+            मेरा&nbsp;
             <span className="text-gray-500">
               Tailor
             </span>

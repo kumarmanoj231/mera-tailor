@@ -7,6 +7,7 @@ import MyTailors from "./pages/MyTailors";
 import Orders from "./pages/Orders";
 import Profile from "./pages/Profle";
 import Bulk from "./pages/Bulk";
+import Contact from "./pages/Contact";
 
 const App = () => {
   return (
@@ -20,6 +21,10 @@ const App = () => {
         <Route path="/my-tailors" element={<MyTailors />} />
         <Route path="/orders" element={<Orders />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/contact" element={<Contact />} />
+
+        {/* Page Not Found → Home */}
+        <Route path="*" element={<Home />} />
       </Routes>
     </div>
   );

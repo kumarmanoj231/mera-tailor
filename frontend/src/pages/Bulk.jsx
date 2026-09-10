@@ -147,6 +147,8 @@ const Bulk = () => {
 
       </section>
 
+      <Footer/>
+
     </div>
   );
 };
@@ -158,6 +160,7 @@ const BusinessCard = ({
   text,
 }) => {
   return (
+    <>
     <div className="rounded-2xl border border-gray-100 bg-white p-7 shadow-sm">
 
       <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gray-950 text-white">
@@ -171,9 +174,13 @@ const BusinessCard = ({
       <p className="mt-3 text-sm leading-6 text-gray-500">
         {text}
       </p>
-      <Footer/>
+    
 
     </div>
+
+      
+    </>
+    
   );
 };
 

@@ -40,7 +40,7 @@ const FooterBottom = () => {
             sm:text-sm
           "
         >
-          © {new Date().getFullYear()} MeraTailor.{" "}
+          © {new Date().getFullYear()} मेरा&nbsp;Tailor.{" "}
           {t("footer.rights")}
         </div>
 
