@@ -1,3 +1,4 @@
+
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
@@ -25,6 +26,9 @@ const resources = {
         joinMeraTailor: "Join MeraTailor",
         hello: "Hello",
         viewProfile: "View Profile",
+
+        // User roles
+        customer: "Customer",
       },
 
       /* ===================================================
@@ -529,6 +533,10 @@ const resources = {
 
         viewProfile:
           "प्रोफ़ाइल देखें",
+
+        // User roles
+        customer:
+          "ग्राहक",
       },
 
       /* ===================================================

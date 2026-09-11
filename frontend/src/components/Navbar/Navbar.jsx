@@ -1,8 +1,10 @@
+
 import React, { useState } from "react";
 
 import {
   Menu,
   X,
+  UserRound,
 } from "lucide-react";
 
 import {
@@ -25,7 +27,7 @@ import MobileMenu from "./MobileMenu";
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
 
   const {
     openSignIn,
@@ -36,6 +38,14 @@ const Navbar = () => {
 
   const isHomePage =
     location.pathname === "/";
+
+  // =====================================================
+  // TEMPORARY USER ROLE
+  // Default role is Customer until database/backend
+  // role management is implemented.
+  // =====================================================
+
+  const userRole = "customer";
 
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
@@ -76,7 +86,9 @@ const Navbar = () => {
           lg:px-8
         "
       >
-        {/* DESKTOP LOGO */}
+        {/* =================================================
+            DESKTOP LOGO
+        ================================================== */}
 
         <div className="hidden md:block">
           <NavbarLogo
@@ -84,7 +96,9 @@ const Navbar = () => {
           />
         </div>
 
-        {/* MOBILE CENTERED LOGO */}
+        {/* =================================================
+            MOBILE CENTERED LOGO
+        ================================================== */}
 
         <div
           className="
@@ -100,22 +114,61 @@ const Navbar = () => {
           />
         </div>
 
-        {/* DESKTOP NAVIGATION */}
+        {/* =================================================
+            DESKTOP NAVIGATION
+        ================================================== */}
 
         <DesktopNavigation
           isHomePage={isHomePage}
         />
 
-        {/* DESKTOP ACTIONS */}
+        {/* =================================================
+            DESKTOP ACTIONS + USER ROLE
+        ================================================== */}
 
-        <DesktopActions
-          language={i18n.language}
-          onChangeLanguage={changeLanguage}
-          onSignIn={handleSignIn}
-          onSignUp={handleSignUp}
-        />
+        <div className="hidden md:flex items-center gap-3">
+          <DesktopActions
+            language={i18n.language}
+            onChangeLanguage={changeLanguage}
+            onSignIn={handleSignIn}
+            onSignUp={handleSignUp}
+          />
 
-        {/* MOBILE MENU BUTTON */}
+          {/* =================================================
+              CUSTOMER ROLE BADGE
+          ================================================== */}
+
+          <div
+            className="
+              inline-flex
+              items-center
+              gap-1.5
+              rounded-full
+              bg-purple-50
+              px-2.5
+              py-1.5
+              text-xs
+              font-medium
+              text-purple-700
+              whitespace-nowrap
+              border border-purple-100
+            "
+            title={t("navbar.customer")}
+          >
+            <UserRound
+              size={13}
+              strokeWidth={2}
+            />
+
+            <span>
+              {t(`navbar.${userRole}`)}
+            </span>
+          </div>
+        </div>
+
+        {/* =================================================
+            MOBILE MENU BUTTON
+        ================================================== */}
 
         <button
           type="button"
@@ -150,7 +203,9 @@ const Navbar = () => {
         </button>
       </nav>
 
-      {/* MOBILE MENU */}
+      {/* ===================================================
+          MOBILE MENU
+      ================================================== */}
 
       <MobileMenu
         open={mobileOpen}
